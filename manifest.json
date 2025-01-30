@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "OrdersToCSV",
+  "description": "Pegar dados das vendas e gerar um CSV.",
+  "version": "0.0.1",
+  "icons": {
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+},
+
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": [
+    "http://www.mercadolivre.com.br/*",
+    "https://www.mercadolivre.com.br/*"
+  ]
+}
