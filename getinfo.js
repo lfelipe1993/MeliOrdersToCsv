@@ -50,7 +50,7 @@ function enviarDados(){
    if(typeof codigo_venda_get !== "undefined" && codigo_venda_get != null) {
       data_venda_aux = codigo_venda_get.innerText;
 
-      const regex = /(\d{2}) (\w{3})/;
+      const regex = /(\d{1,2}) (\w{3})/;
 
       const match = data_venda_aux.match(regex);
       data_venda = match[0].replace(/,/g, '.');
@@ -169,6 +169,7 @@ function enviarDados(){
     //console.log("exec")
 
     //return price;
+
     return new Promise((resolve, reject) => {
            const successObject = {
                aDataVenda: data_venda,
@@ -190,6 +191,4 @@ function enviarDados(){
 
      });
 }
-
-//console.log(enviarDados())
 enviarDados();

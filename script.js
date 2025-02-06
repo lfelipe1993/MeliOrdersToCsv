@@ -155,12 +155,11 @@ function executeFunc(){
     }
     
     async function getAllTabs(tabChromeTab,chromeTabId) {
-
           const price = await chrome.scripting.executeScript({
             target: {tabId: chromeTabId},
             files : [ "getinfo.js" ],
            }).then(setText);
-
+           //.then(() => console.log("Script injetado com sucesso!: " + price));
 
     }
     
